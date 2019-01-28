@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 9</title>
+    <script>
+        function fittingWords(str, strArray){
+            let splitStr = str.split('');
+            let fits = true;
+
+            let output = [];
+
+            for(let i = 0; i < strArray.length; i++){
+                for(let j = 0; j < splitStr.length; j++){
+                    if(!strArray[i].includes(splitStr[j])){
+                        fits = false;
+                    }
+                }
+
+                if(fits){
+                    output.push(strArray[i]);
+                }
+
+                fits = true;
+            }
+
+            return output;
+        }
+
+        console.log(fittingWords('cat', ['cat','caterpillar','whale','accurate','smile','cactus','cute']));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

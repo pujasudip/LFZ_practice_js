@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 10</title>
+    <script>
+        function permutations(str){
+            let possibleNum = possibleNumOfPermutations(str);
+            return possibleNum;
+        }
+
+        function possibleNumOfPermutations(str){
+            let num = 1;
+            for(let i = 1; i <= str.length; i++){
+                num *= i;
+            }
+            return num;
+        }
+
+        console.log(permutations('abc'));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
