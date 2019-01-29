@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EvenOdd</title>
+    <script>
+        function evenOdd(arr) {
+            let output = {even: [], odd: []};
+
+            arr.forEach((item)=>{
+                (item % 2 === 0) ?
+                    output.even.push(item) :
+                    isNaN(item) ? "" : output.odd.push(item);
+            });
+
+            return output;
+        }
+
+        console.log('output:', evenOdd([2,5,1,6,8,2,20,'cat',13,3]));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
