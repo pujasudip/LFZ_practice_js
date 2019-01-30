@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>factors</title>
+    <script>
+        function findFactors(arr) {
+            let output = {};
+
+            arr.forEach((item, outerIndex)=>{
+                if(!output[item]) {
+                    output[item] = [];
+                    arr.forEach((inner, innerIndex) => {
+                        if ((item % inner === 0) && (innerIndex !== outerIndex)) {
+                            output[item].push(inner);
+                        }
+                    });
+                }
+            });
+
+
+            return output;
+        }
+
+        console.log(findFactors([4,2,8,6,3,9]))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
