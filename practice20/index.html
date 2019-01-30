@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sortingObject</title>
+    <script>
+        let input_array = [
+                {name: 'John', age:42, gender:'M'},
+                {name: 'Jack', age:34, gender:'M'},
+                {name: 'Michael',age:40, gender: 'M'},
+                {name: 'Kendra',age:48, gender:'F'}
+            ];
+
+        function sortingObject(arr) {
+            return arr.sort(function(a, b){
+                return a.name > b.name ? 1 : -1;
+            });
+
+        }
+
+        // sortingObject(input_array);
+
+        console.log(sortingObject(input_array));
+    </script>
+</head>
+<body>
+
+</body>
+</html>
